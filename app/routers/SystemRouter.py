@@ -26,7 +26,6 @@ def getSystemInfo():
         info['os'] = get_linux_info()
     info['platform-release']=platform.release()
     info['hostname']=socket.gethostname()
-    info['ip-address']=socket.gethostbyname(socket.gethostname())
     info['public-ip-address']=get_public_ip()
     info['mac-address']=':'.join(re.findall('..', '%012x' % uuid.getnode()))
     info['processor']=get_processor_details()
